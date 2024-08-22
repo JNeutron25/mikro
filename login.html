@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/styles.css"> 
 <link rel="stylesheet" href="login.css" media="screen">
 <script src="js/efectonieve.js"></script>
-
+<link rel="icon" type="image/png" href="imagenes/favicon.png"/>
 </head>
 
 
@@ -17,7 +17,7 @@
 
  document.onload=cargarFunciones();
   function cargarFunciones(){
-	 /*iniNevada(100,80); Carga Nieve */
+	 /**  iniNevada(100,80); Carga Nieve */
 	  }
 
 
@@ -25,7 +25,7 @@
 
 
 
-<body onload="iniNevada(100,80)"  class='login'>
+<body onLoad="cargarFunciones()" class='login'>
 $(if chap-id)
 	<form name="sendin" action="$(link-login-only)" method="post">
 		<input type="hidden" name="username" />
@@ -60,7 +60,10 @@ $(endif)
 <aqui se puede escribir>
 </legend>
 <p style="text-align:center; color:#FFF"> Ingrese su codigo Pin: </p>
-<input name="username" type="text" value="$(username)" placeholder="PIN" size="30" /> <br>
+<p style="text-align:center; color:#FFF">&nbsp;</p>
+
+
+<input maxlength="6"  name="username" type="text" id="campo" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()" value="$(username)" placeholder="PIN" size="30" /> <br>
 
 <!--
 <input autocomplete="off" name="" type="password" label="false" placeholder="Contraseña" size="30" /> -->
